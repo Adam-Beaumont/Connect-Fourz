@@ -175,7 +175,7 @@ for (var i = 0; i < 7; i++){
                 current_turn = 2;
                 piecePlayed = bluePieces[current_blue];
                 current_blue++;
-                piecePlayed.style.top = "calc( "+((playSlots[row*7+col].getBoundingClientRect().top-(vh(50) - (vmin(8) * 3) - vmin(5)))/vmin(50))*50+"vmin + 50vh - (8vmin * 3) - 5vmin)";
+                piecePlayed.style.top = "calc( "+row*10+"vmin + 50vh - (8vmin * 3) - 5vmin)";
                 piecePlayed.style.left = "calc( "+((playSlots[row*7+col].getBoundingClientRect().left-((vw(100)- vmin(70))/2))/vmin(60))*60+"vmin + ( 100vw - 70vmin ) / 2 )";
                 moveLock=1;
                 if(game_mode == 2 )
@@ -221,7 +221,7 @@ for (var i = 0; i < 7; i++){
                     piecePlayed.style.left = "calc("+playSlots[compRow*7+compCol].getBoundingClientRect().left+"px + 1vmin)";
                 }, 1000);
                 setTimeout(function(){
-                    piecePlayed.style.top =  "calc( "+((playSlots[compRow*7+compCol].getBoundingClientRect().top-(vh(50) - (vmin(8) * 3) - vmin(5)))/vmin(50))*50+"vmin + 50vh - (8vmin * 3) - 5vmin)";
+                    piecePlayed.style.top =  "calc( "+compRow*10+"vmin + 50vh - (8vmin * 3) - 5vmin)";
                     piecePlayed.style.left = "calc( "+((playSlots[compRow*7+compCol].getBoundingClientRect().left-((vw(100)- vmin(70))/2))/vmin(60))*60+"vmin + ( 100vw - 70vmin ) / 2 )";
                 }, 2000);
                 setTimeout(function(){
@@ -240,7 +240,7 @@ for (var i = 0; i < 7; i++){
                 piecePlayed = redPieces[current_red];
                 moveLock = 1;
                 current_red++;
-                piecePlayed.style.top = "calc( "+((playSlots[row*7+col].getBoundingClientRect().top-(vh(50) - (vmin(8) * 3) - vmin(5)))/vmin(50))*50+"vmin + 50vh - (8vmin * 3) - 5vmin)";
+                piecePlayed.style.top = "calc( "+row*10+"vmin + 50vh - (8vmin * 3) - 5vmin)";
                 piecePlayed.style.left = "calc( "+((playSlots[row*7+col].getBoundingClientRect().left-((vw(100)- vmin(70))/2))/vmin(60))*60+"vmin + ( 100vw - 70vmin ) / 2 )";
                 setTimeout(function(){
                     if (checkVictoryCondition(col,row,boardState[col][row],boardState))
