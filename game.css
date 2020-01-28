@@ -1,0 +1,447 @@
+body{
+    text-align: center;
+    background-image:url("images/background2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    padding:1rem;
+    /* cursor: url(images/cursor2.png), auto; */
+    font-family: "Helvetica";
+    z-index:-1;
+    overflow-y: hidden;
+}
+
+.wrapper{
+    display: grid;
+    min-height:100%;
+    position:relative;
+    z-index:-1;
+  }
+
+#game{
+    display:none;
+}
+
+#title{
+    background-image: url(images/GameLogo-Hi-3-small.png);
+    background-repeat: no-repeat;
+    height: 40vh;
+    background-position: center;
+    background-size: contain;
+    font-family: 'Helvetica';
+    color: rgb(218, 201, 168);
+    font-size: 3rem;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    padding-bottom: 1rem;
+}
+#title2{
+    background-image: url(images/GameLogo-Hi-3-small.png);
+    background-repeat: no-repeat;
+    height: 15vh;
+    position: absolute;
+    left: 5px;
+    width: 30vh;
+    top: 5px;
+    /* width: 100%; */
+    background-position: center;
+    background-size: contain;
+    font-family: 'Helvetica';
+    color: rgb(218, 201, 168);
+    font-size: 3rem;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+#subtitles{
+    font-family: 'luckiest guy', sans-serif;
+    color:#2ab7ca;
+    font-size: 1.75rem;
+    padding-bottom: 4rem;
+    text-shadow: 2px 2px 6px #000000cf;
+}
+
+.playArea
+{
+    grid-template-columns: repeat(7, 8vmin);
+    grid-template-rows: repeat(6, 8vmin);
+    text-align: center;
+    grid-gap: 2vmin;
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: calc(50vh - (8vmin * 3) - 5vmin);
+    justify-content: center;
+}
+
+.playAreaBackground
+{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.158);
+    border-radius: 8vmin;
+}
+
+.playAreaInteract
+{
+    grid-template-columns: repeat(7, 10vmin);
+    grid-template-rows: 60vmin;
+    float: none;
+    display: grid;
+    position: absolute;
+    margin-left: calc( ( 100vw - 70vmin ) / 2);
+    z-index: 999;
+    padding-top: calc(50vh - (8vmin * 3) - 5vmin);
+    justify-content: center;
+}
+.playAreaInteractCols
+{
+    width: 100%;
+    height: 100%;
+}
+
+.levels
+{
+    grid-template-columns: 30% 5% 30%;
+    text-align: center;
+    grid-template-areas: "lvl1 . lvl2";
+    display: grid;
+    padding-bottom: 4rem;
+    justify-content: center;
+}
+
+.staticButton
+{
+    position: absolute;
+    font-size: 0.75rem;
+    right: 80px;
+    top: 20px;
+    padding: 10px;
+    border-radius: 1rem;
+    border-color: #fe4a49;
+    background: rgb(2,0,36);
+    background: linear-gradient(128deg, rgba(2,0,36,1) 0%, rgba(254,74,73,1) 0%, rgba(250,73,72,1) 55%, rgba(179,52,51,1) 100%);
+    cursor: pointer;
+    box-shadow: -moz-box-shadow: 0px 0px 16px 9px rgba(0,0,0,0.14);
+    box-shadow: 0px 0px 16px 9px rgba(0,0,0,0.14);
+    overflow: hidden;
+    border-style: none;
+    z-index: 2000;
+}
+
+.endGameMenuGrid
+{
+    grid-template-columns: 30% 5% 30%;
+    text-align: center;
+    grid-template-areas: "newGame . mainMenu";
+    display: grid;
+    width: min( 90% , 1000px);
+    left: 0px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+#endGameMenu
+{
+    position: absolute;
+    top: -100vh;
+    text-align: center;
+    width: 100%;
+    left: 0px;
+    justify-content: center;
+    z-index:2000;
+    transition: ease-out 2000ms;
+    display: none;
+}
+#mainMenuButton
+{
+    grid-area: mainMenu;
+    white-space: nowrap;
+    display: block;
+    font-family: 'luckiest guy', sans-serif;
+    color: #2ab7ca;
+    font-size: min( 3.5vw, 40px );
+    right: 80px;
+    top: 20px;
+    padding: 10px;
+    border-radius: 1rem;
+    border-color: #fe4a49;
+    background: rgb(2,0,36);
+    background: linear-gradient(128deg, rgba(2,0,36,1) 0%, rgba(254,74,73,1) 0%, rgba(250,73,72,1) 55%, rgba(179,52,51,1) 100%);
+    cursor: pointer;
+    box-shadow: -moz-box-shadow: 0px 0px 16px 9px rgba(0,0,0,0.14);
+    box-shadow: 0px 0px 16px 9px rgba(0,0,0,0.14);
+    overflow: hidden;
+    border-style: none;
+}
+.bumpButton{
+    transition: ease 400ms;
+}
+.bumpButton:hover{
+    transform: translateY( -10px);
+}
+#newGameButton
+{
+    white-space: nowrap;
+    grid-area: newGame;
+    display: block;
+    font-family: 'luckiest guy', sans-serif;
+    color: #2ab7ca;
+    font-size: min( 3.5vw, 40px );
+    right: 80px;
+    top: 20px;
+    padding: 10px;
+    border-radius: 1rem;
+    border-color: #fe4a49;
+    background: rgb(2,0,36);
+    background: linear-gradient(128deg, rgba(2,0,36,1) 0%, rgba(254,74,73,1) 0%, rgba(250,73,72,1) 55%, rgba(179,52,51,1) 100%);
+    cursor: pointer;
+    box-shadow: -moz-box-shadow: 0px 0px 16px 9px rgba(0,0,0,0.14);
+    box-shadow: 0px 0px 16px 9px rgba(0,0,0,0.14);
+    overflow: hidden;
+    border-style: none;
+}
+#gameOverText{
+    font-family: 'luckiest guy', sans-serif;
+    font-size: min( 8vw, 100px );
+    display: block;
+    padding-bottom: 5vw;
+}
+.animButton
+{
+    grid-area: lvl1;
+    display: block;
+    font-size: 1.75rem;
+    line-height: 2.75rem;
+    padding: 50px;
+    border-radius: 6rem;
+    border-color: #fe4a49;
+    background: rgb(2,0,36);
+    background: linear-gradient(128deg, rgba(2,0,36,1) 0%, rgba(254,74,73,1) 0%, rgba(250,73,72,1) 55%, rgba(179,52,51,1) 100%);
+    cursor: pointer;
+    box-shadow: -moz-box-shadow: 0px 0px 16px 9px rgba(0,0,0,0.14);
+    box-shadow: 0px 0px 16px 9px rgba(0,0,0,0.14);
+    overflow: hidden;
+    /* height: 25vh; */
+    border-style: none;
+}
+
+.animButton.animated{
+     transform-origin: bottom;
+     animation-iteration-count: infinite;
+     animation-name: animButton;
+     animation-duration: 0.5s;
+}
+
+@keyframes animButton {
+    0%   { transform: scale(1,1)      translateY(0); }
+    5%  { transform: scale(1.1,.9)   translateY(0); }
+    43%  { transform: scale(.9,1.1)   translateY(-100px); }
+    80%  { transform: scale(1.05,.95) translateY(0); }
+    90%  { transform: scale(1,1)      translateY(-7px); }
+    95%  { transform: scale(1,1)      translateY(0); }
+    100% { transform: scale(1,1)      translateY(0); }
+}
+
+#lvl2
+{
+    grid-area: lvl2;
+    display: block;
+    font-size: 1.75rem;
+    line-height: 2.75rem;
+    padding: 0;
+    border-radius: 6rem;
+    border-color: #fe4a49;
+    background: rgb(2,0,36);
+    background: linear-gradient(128deg, rgba(2,0,36,1) 0%, rgba(254,74,73,1) 0%, rgba(250,73,72,1) 55%, rgba(179,52,51,1) 100%);
+    cursor: pointer;
+    box-shadow: -moz-box-shadow: 0px 0px 16px 9px rgba(0,0,0,0.14);
+    box-shadow: 0px 0px 16px 9px rgba(0,0,0,0.14);
+    overflow: hidden;
+    /* height: 25vh; */
+    border-style: none;
+}
+
+.lvlFont
+{
+    font-family: 'luckiest guy', sans-serif;
+    color: #2ab7ca;
+    font-size: max( 3.5vw, 30px );
+}
+
+#turnIndicatorFont
+{
+    font-family: 'luckiest guy', sans-serif;
+    color: #2ab7ca;
+    font-size: max( 40px, min( 5vw , 70px ));
+    position: absolute;
+    bottom: 50px;
+    left: calc( 50vw - 5.2ex );
+}
+
+.smallButtonFont
+{
+    font-family: 'luckiest guy', sans-serif;
+    color: #2ab7ca;
+    font-size: 2rem;
+}
+
+.popup{
+    display:none;
+    z-index:20;
+    margin:auto;
+    width:70vw;
+    height:70vh;
+}
+
+.bluePieces {
+    background-image: url(images/bluepiece-small.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: block;
+    position: absolute;
+    text-align: center;
+    width: 8.4vmin;
+    height: 8.4vmin;
+    top: -10vmin;
+    left: 50vw;
+    z-index: 1;
+    font-size: 5vw;
+    color: white;
+    transition: linear 300ms;
+    margin: -0.2% 
+}
+
+.redPieces {
+    background-image:url("images/redpiece-small.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: block;
+    position: absolute;
+    text-align: center;
+    width: 8.4vmin;
+    height: 8.4vmin;
+    top: -10vmin;
+    left: 50vw;
+    z-index: 1;
+    font-size: 5vw;
+    color: white;
+    transition: linear 300ms;
+    margin: -0.2%;
+}
+
+.bluePiecesBackground {
+    background-image: url(images/bluepiece-small.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: block;
+    position: absolute;
+    text-align: center;
+    width: 5.4vmin;
+    height: 5.4vmin;
+    top: -10vmin;
+    left: 50vw;
+    z-index: -1;
+    font-size: 5vw;
+    color: white;
+    transition: linear 300ms;
+    margin: -0.2% 
+}
+
+.redPiecesBackground {
+    background-image:url("images/redpiece-small.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: block;
+    position: absolute;
+    text-align: center;
+    width: 5.4vmin;
+    height: 5.4vmin;
+    top: -10vmin;
+    left: 50vw;
+    z-index: -1;
+    font-size: 5vw;
+    color: white;
+    transition: linear 300ms;
+    margin: -0.2%;
+}
+
+.wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+#music{
+    display:none;
+}
+
+#playpause{
+    background: none;
+    border: none;
+    background-image: url(images/music.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    right: 16px;
+    top: 3vh;
+    width: 5vh;
+    height: 5vh;
+    cursor: pointer;
+    z-index: 3;
+}
+
+/* ========================= CSS RESPONSIVE ========================= */
+@media (min-width: 50px) and (max-width: 768px) {
+    body{
+        background-size:cover; 
+        height:100vh;
+    }
+    .levels
+    {
+        grid-template-columns: auto;
+        text-align: center;
+        grid-template-areas: 
+        ". lvl1 . "
+        ". lvl2 . ";
+        display: grid;
+        padding-bottom: 4rem;
+    }
+    #lvl1
+    {
+        padding: 2rem;
+        border-radius: 4rem;
+        margin-bottom: 30px;
+    }
+
+    #lvl2
+    {
+        padding: 2rem;
+        border-radius: 4rem; 
+    }
+    #turnIndicatorFont{
+        bottom: 90px;
+    }
+    .staticButton
+    {
+        top: unset;
+        right: calc( 50vw - 85px );
+        bottom: 20px;
+    }
+    #playpause{
+        width:15vw;
+        height:15vw;
+    }
+    #title{
+        font-size: 2rem;
+        margin-top: calc(  -85px + 5vh   );
+    }
+    #title2{
+        width: 100%;
+        height: 20vh;
+        z-index: 2000;
+    }
+    #message{
+        font-size: 2rem;
+    }
+}

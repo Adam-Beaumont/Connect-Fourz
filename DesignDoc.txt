@@ -1,0 +1,45 @@
+---- Color Scheme ----
+
+Light Colors:
+
+red
+Hex:#ffa4a4
+RGB:rgb(255.0, 164.0, 164.0)
+
+blue
+Hex:#7aefff
+RGB:rgb(122.0, 239.0, 255.0)
+
+yellow
+Hex:#ffebb2
+RGB:rgb(255.0, 235.0, 178.0)
+
+grey
+Hex:#f2f2f6
+RGB:rgb(242.0,242.0,246.0)
+
+white
+Hex:#f9f9fd
+RGB:rgb(249.0,249.0,253.0)
+
+Normal Colors:
+
+red
+Hex:#fe4a49
+RGB:rgb(254.0,74.0,73.0)
+
+blue
+Hex:#2ab7ca
+RGB:rgb(42.0, 183.0, 202.0)
+
+yellow
+Hex:#fed766
+RGB:rgb(254.0, 215.0, 102.0)
+
+grey
+Hex:#e6e6ea
+RGB:rgb(230.0, 230.0, 234.0)
+
+white
+Hex:#f4f4f8
+RGB:rgb(244.0,244.0,248.0)

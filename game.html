@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Connect Fourz</title>
+    <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Luckiest+Guy|Schoolbell|Beth+Ellen&display=swap" rel="stylesheet">
+    <link href="game.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <!-- <body onload = "followMouse();"> -->
+    <button id="playpause"></button>
+    <div id="game">
+      <div class ="wrap">
+            <div id="title2"></div>
+            <button type = "button" id = "returnMenu" class="staticButton bumpButton"> <span class = "smallButtonFont">End Game</span> </button>
+            <div class="playAreaInteract">
+              <div class="playAreaInteractCols"></div>
+              <div class="playAreaInteractCols"></div>
+              <div class="playAreaInteractCols"></div>
+              <div class="playAreaInteractCols"></div>
+              <div class="playAreaInteractCols"></div>
+              <div class="playAreaInteractCols"></div>
+              <div class="playAreaInteractCols"></div>
+            </div>
+            <div class="playArea">
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+              <div class="playAreaBackground"></div>
+            </div>
+            <div class="bluePieces"></div>
+            <div class="bluePieces"></div>
+            <div class="bluePieces"></div>
+            <div class="bluePieces"></div>
+            <div class="bluePieces"></div>
+            <div class="bluePieces"></div>
+            <div class="bluePieces"></div>
+            <div class="bluePieces"></div>
+            <div class="bluePieces"></div>
+            <div class="bluePieces"></div>
+            <div class="bluePieces"></div>
+            <div class="bluePieces"></div>
+            <div class="bluePieces"></div>
+            <div class="bluePieces"></div>
+            <div class="bluePieces"></div>
+            <div class="bluePieces"></div>
+            <div class="bluePieces"></div>
+            <div class="bluePieces"></div>
+            <div class="bluePieces"></div>
+            <div class="bluePieces"></div>
+            <div class="bluePieces"></div>
+            <div class="redPieces"></div>
+            <div class="redPieces"></div>
+            <div class="redPieces"></div>
+            <div class="redPieces"></div>
+            <div class="redPieces"></div>
+            <div class="redPieces"></div>
+            <div class="redPieces"></div>
+            <div class="redPieces"></div>
+            <div class="redPieces"></div>
+            <div class="redPieces"></div>
+            <div class="redPieces"></div>
+            <div class="redPieces"></div>
+            <div class="redPieces"></div>
+            <div class="redPieces"></div>
+            <div class="redPieces"></div>
+            <div class="redPieces"></div>
+            <div class="redPieces"></div>
+            <div class="redPieces"></div>
+            <div class="redPieces"></div>
+            <div class="redPieces"></div>
+            <div class="redPieces"></div>
+            <div id="question"></div>
+            <!-- <div id="answer"></div> -->
+            <!-- <div class="wrong"></div> -->
+        </div>
+        <div id="turnIndicatorFont">It's Blues Turn!</div>
+
+        <!-- buttons for end game -->
+        <div id="endGameMenu">
+          <span id="gameOverText">Game Over!</span>
+          <div class="endGameMenuGrid">
+            <button type = "button" id = "newGameButton" class="bumpButton">Rematch</button>
+            <button type = "button" id = "mainMenuButton" class="bumpButton">Main Menu</button>
+          </div>
+        </div>
+    </div>
+
+    <div id="rules" class="popup">
+      <h2></h2>
+      <ul>
+        <li>Connect Fourz</li>
+        <li>I wrote this game to demonstrate</li>
+        <li>use of javascript, jquery, html,</li>
+        <li>CSS, and responsive design.</li>
+      </ul>
+      <button type = "button" class = "Btn" id = "returnBtn">Return</button>
+    </div>
+
+    <div id="menu">
+      <div class="bluePiecesBackground"></div>
+      <div class="redPiecesBackground"></div>
+      <div id="title"></div>
+        <div id = "wrapper">
+            <div id="subtitles">Select Game Mode.</div>
+            <div class="levels">
+                <button type = "button" id = "lvl1" class="animButton"> <span class = "lvlFont">Vs Computer</span> </button>
+                <button type = "button" id = "lvl2" class="animButton"> <span class = "lvlFont">2 Player</span> </button>
+            </div>
+          </div>
+      </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <audio controls="" loop="" id="music">
+    <source src="music/rolemusic.mp3" type="audio/mpeg">
+  </audio>
+  <script src="game.js"></script>
+  </body>
+</html>
